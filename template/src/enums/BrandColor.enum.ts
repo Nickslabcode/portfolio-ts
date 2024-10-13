@@ -1,8 +1,8 @@
 export enum BrandColor {
-  NEUTRAL = 'neutral',
-  PRIMARY = 'primary',
-  SECONDARY = 'secondary',
-  ACCENT = 'accent',
-  GHOST = 'ghost',
-  LINK = 'link',
+  NEUTRAL = 'btn-neutral',
+  PRIMARY = 'btn-primary',
+  SECONDARY = 'btn-secondary',
+  ACCENT = 'btn-accent',
+  GHOST = 'btn-ghost',
+  LINK = 'btn-link',
 }
