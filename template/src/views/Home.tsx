@@ -10,7 +10,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col items-center justify-center pt-10 gap-5">
-      <div className="w-3/4 flex justify-between items-center gap-4">
+      <div className="w-3/4 flex flex-col md:flex-row justify-between items-center gap-4">
         <h1 className="font-semibold text-lg text-start">
           Hello, I'm a{' '}
           <span className="font-mono text-primary">
@@ -28,14 +28,14 @@ const Home = () => {
       <Divider value="Work" />
       <div className="w-3/4 text-justify">
         <p>
-          Still early in my developer journey, I'm a <i>pragmatic learner</i>{' '}
-          who thrives when my head, heart, and hands work in harmony to solve
-          real-world problems. After nearly 4 years in customer care within the
-          hosting services field, as well as working as a freelancer, I've
-          gained valuable experience in researching, solving technical
-          challenges, communication, adaptability, and discipline. I'm
-          passionate about building digital services and consider myself a
-          jack-of-all-trades, with the goal of mastering JavaScript.
+          &emsp; Still early in my developer journey, I'm a{' '}
+          <i>pragmatic learner</i> who thrives when my head, heart, and hands
+          work in harmony to solve real-world problems. After nearly 4 years in
+          customer care within the hosting services field, as well as working as
+          a freelancer, I've gained valuable experience in researching, solving
+          technical challenges, communication, adaptability, and discipline.
+          Recently graduated from Telerik Academy, I'm passionate about building
+          digital services with the goal of mastering JavaScript.
         </p>
       </div>
       <Button
@@ -45,6 +45,7 @@ const Home = () => {
       >
         My Portfolio &rarr;
       </Button>
+      <Divider value="Bio" />
     </div>
   );
 };
