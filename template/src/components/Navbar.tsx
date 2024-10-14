@@ -30,7 +30,7 @@ const Navbar = () => {
           </a>
         </div>
       </div>
-      <div className="flex gap-6">
+      <div className="flex gap-2">
         <details className="md:hidden dropdown dropdown-end">
           <summary className="btn btn-ghost" onClick={handleHamburgerClick}>
             {isExpanded ? <IoClose size={25} /> : <IoMenu size={25} />}
