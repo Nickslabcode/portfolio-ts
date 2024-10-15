@@ -1,5 +1,4 @@
 import React from 'react';
-import Button from '../hoc/Button.tsx';
 import { FaSquareUpwork } from 'react-icons/fa6';
 
 const Timeline: React.FC = () => {
