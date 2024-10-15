@@ -1,16 +1,16 @@
-import React from 'react';
 import selfMini from '../assets/self-mini.png';
 import Divider from '../components/Divider.tsx';
 import Button from '../hoc/Button.tsx';
 import { BrandColor } from '../enums/BrandColor.enum.ts';
 import { ButtonVariant } from '../enums/ButtonVariant.enum.ts';
 import { useNavigate } from 'react-router-dom';
+import Timeline from '../components/Timeline.tsx';
 const Home = () => {
   const navigate = useNavigate();
 
   return (
     <div className="flex flex-col items-center justify-center pt-10 gap-5">
-      <div className="w-3/4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div className="w-3/4 flex flex-col lg:flex-row justify-between items-center gap-4">
         <h1 className="font-semibold text-lg text-start">
           Hello, I'm a{' '}
           <span className="font-mono text-primary">
@@ -45,7 +45,10 @@ const Home = () => {
       >
         My Portfolio &rarr;
       </Button>
-      <Divider value="Bio" />
+      <Divider value="Relevant Bio" />
+      <div className="w-3/4">
+        <Timeline />
+      </div>
     </div>
   );
 };
