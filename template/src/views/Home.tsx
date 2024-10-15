@@ -9,7 +9,6 @@ import Timeline from '../components/Timeline.tsx';
 import { FaPaw } from 'react-icons/fa';
 import { FaPuzzlePiece } from 'react-icons/fa6';
 import { SiNintendoswitch } from 'react-icons/si';
-import { BsLadder } from 'react-icons/bs';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -85,6 +84,9 @@ const Home = () => {
             friends on the Nintendo Switch
           </li>
         </ul>
+      </div>
+      <div className="w-3/4 pt-10">
+        <p className="text-sm">© 2024 Nikola Nenovski. All right reserved.</p>
       </div>
     </div>
   );

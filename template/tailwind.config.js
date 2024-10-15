@@ -8,7 +8,7 @@ export default {
     extend: {},
   },
   daisyui: {
-    themes: ['dark', 'bumblebee', 'retro'],
+    themes: ['dark', 'bumblebee', 'retro', 'cupcake'],
   },
   screens: {
     sm: '640px',

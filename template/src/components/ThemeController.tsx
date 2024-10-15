@@ -1,7 +1,7 @@
 const ThemeController = () => {
   return (
     <label className="swap swap-rotate">
-      <input type="checkbox" className="theme-controller" value="bumblebee" />
+      <input type="checkbox" className="theme-controller" value="cupcake" />
 
       {/* sun icon */}
       <svg
