@@ -21,9 +21,9 @@ const Timeline: React.FC = () => {
         </div>
         <div className="timeline-start mb-10 md:text-end timeline-box shadow-md">
           <time className="font-mono italic">04.2024 - 09.2024</time>
-          <div className="text-lg font-black">
+          <h2 className="text-lg font-semibold">
             Telerik Alpha JavaScript Track
-          </div>
+          </h2>
           Graduated Telerik's Academy School with JavaScript with excellence.
           <br />
           Won Best{' '}
@@ -55,7 +55,7 @@ const Timeline: React.FC = () => {
         </div>
         <div className="timeline-end mb-10 md:text-start timeline-box shadow-md">
           <time className="font-mono italic">09.2020 - 03.2024</time>
-          <div className="text-lg font-black">Siteground Hosting</div>
+          <h2 className="text-lg font-semibold">Siteground Hosting</h2>
           Provided expert technical support to global clients in English,
           resolving issues related to WordPress, DNS, domain management, FTP,
           email and SSH configuration.
@@ -80,10 +80,10 @@ const Timeline: React.FC = () => {
         </div>
         <div className="timeline-start mb-10 md:text-end timeline-box shadow-md">
           <time className="font-mono italic">03.2019 - 12.2019</time>
-          <div className="text-lg font-black">Independent Freelancer</div>
+          <h2 className="text-lg font-semibold">Independent Freelancer</h2>
           <a
             href="https://www.upwork.com/freelancers/~019b57b5b048ed8468"
-            className="btn btn-outline btn-primary rounded-3xl btn-sm my-1 items-center"
+            className="btn btn-link rounded-3xl btn-sm my-1 items-center"
             target="_blank"
           >
             <FaSquareUpwork size={20} />
