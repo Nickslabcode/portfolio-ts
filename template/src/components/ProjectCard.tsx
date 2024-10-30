@@ -1,21 +1,27 @@
-const ProjectCard = () => {
+import { Project } from '../models/Project';
+
+interface ProjectCardProps {
+  project: Partial<Project>;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-xl">
+    <div className="card bg-base-100 w-80 shadow-xl">
       <figure>
         <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
+          src={project.featuredImage}
+          alt={`featured image for ${project.title}`}
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">
-          Shoes!
-          <div className="badge badge-secondary">NEW</div>
-        </h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <h2 className="card-title">{project.title}</h2>
+        <p className="text-start">{project.description}</p>
         <div className="card-actions justify-end">
-          <div className="badge badge-outline">Fashion</div>
-          <div className="badge badge-outline">Products</div>
+          {project.technologies?.map((technology: string) => (
+            <div className="badge badge-outline" key={technology}>
+              {technology}
+            </div>
+          ))}
         </div>
       </div>
     </div>

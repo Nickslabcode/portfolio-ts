@@ -3,7 +3,7 @@ export const data = [
     title: 'Veil',
     description:
       'Collaborative messenger single-page application with meeting scheduling, notes and video calls.',
-    featuredImage: 'veil',
+    featuredImage: 'https://nikola-nenovski.info/images/veil.png',
     technologies: [
       'TypeScript',
       'React',
@@ -19,7 +19,7 @@ export const data = [
   {
     title: 'Everything Pixel',
     description: 'Single-page forum application with social features.',
-    featuredImage: 'everything-pixel',
+    featuredImage: 'https://nikola-nenovski.info/images/everything-pixel.png',
     technologies: ['React', 'Firebase', 'SCSS'],
     githubLink: 'https://github.com/Team-06-alpha-A62/everything-pixel',
   },
@@ -27,7 +27,7 @@ export const data = [
     title: 'Kapow',
     description:
       'Gif management single-page application with vanilla JavaScript.',
-    featuredImage: 'kapow',
+    featuredImage: 'https://nikola-nenovski.info/images/kapow.png',
     technologies: [
       'JavaScript',
       'AJAX',
