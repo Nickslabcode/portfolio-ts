@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar.tsx';
 import Projects from './views/Projects.tsx';
 import Home from './views/Home.tsx';
+import DetailedProjectView from './views/DetailedProjectView.tsx';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/:slug" element={<DetailedProjectView />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,6 +1,7 @@
 export const data = [
   {
     title: 'Veil',
+    slug: 'veil',
     description:
       'Collaborative messenger single-page application with meeting scheduling, notes and video calls.',
     featuredImage: 'https://nikola-nenovski.info/images/veil.png',
@@ -18,6 +19,7 @@ export const data = [
   },
   {
     title: 'Everything Pixel',
+    slug: 'everything-pixel',
     description: 'Single-page forum application with social features.',
     featuredImage: 'https://nikola-nenovski.info/images/everything-pixel.png',
     technologies: ['React', 'Firebase', 'SCSS'],
@@ -25,6 +27,7 @@ export const data = [
   },
   {
     title: 'Kapow',
+    slug: 'kapow',
     description:
       'Gif management single-page application with vanilla JavaScript.',
     featuredImage: 'https://nikola-nenovski.info/images/kapow.png',
