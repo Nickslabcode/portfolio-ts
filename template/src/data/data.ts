@@ -13,7 +13,6 @@ export const data = [
       'Tailwind CSS',
       'Daisy UI',
       'Giphy API',
-      'Muuri Grid',
     ],
     githubLink: 'https://github.com/Team-06-alpha-A62/veil',
   },
@@ -31,14 +30,7 @@ export const data = [
     description:
       'Gif management single-page application with vanilla JavaScript.',
     featuredImage: 'https://nikola-nenovski.info/images/kapow.png',
-    technologies: [
-      'JavaScript',
-      'AJAX',
-      'Giphy API',
-      'HTML',
-      'CSS',
-      'Masonry Grid',
-    ],
+    technologies: ['JavaScript', 'AJAX', 'Giphy API', 'HTML', 'CSS'],
     githubLink: 'https://github.com/Team-06-alpha-A62/kapow',
   },
 ];

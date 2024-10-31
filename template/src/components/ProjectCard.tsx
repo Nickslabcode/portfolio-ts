@@ -3,6 +3,7 @@ import { BrandColor } from '../enums/BrandColor.enum';
 import { ButtonVariant } from '../enums/ButtonVariant.enum';
 import Button from '../hoc/Button';
 import { Project } from '../models/Project';
+import { motion } from 'framer-motion';
 
 interface ProjectCardProps {
   project: Partial<Project>;
@@ -12,7 +13,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="card bg-base-100 w-80 shadow-xl">
+    <motion.div
+      className="card bg-base-100 w-80 shadow-xl"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 20 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+    >
       <figure>
         <img
           src={project.featuredImage}
@@ -39,7 +46,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </Button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

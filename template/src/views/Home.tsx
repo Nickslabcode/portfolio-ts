@@ -9,13 +9,27 @@ import Timeline from '../components/Timeline.tsx';
 import { FaPaw } from 'react-icons/fa';
 import { FaPuzzlePiece } from 'react-icons/fa6';
 import { SiNintendoswitch } from 'react-icons/si';
+import Footer from '../components/Footer.tsx';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col items-center justify-center pt-10 gap-5">
-      <div className="w-3/4 flex flex-col lg:flex-row justify-between items-center gap-4">
+    <motion.div
+      className="flex flex-col items-center justify-center pt-10 gap-5"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 20 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+    >
+      <motion.div
+        className="w-3/4 flex flex-col lg:flex-row justify-between items-center gap-4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+      >
         <h1 className="font-semibold text-lg text-start">
           Hello, I'm a{' '}
           <span className="font-mono text-primary">
@@ -29,9 +43,15 @@ const Home = () => {
             <img src={selfMini} />
           </div>
         </div>
-      </div>
+      </motion.div>
       <Divider value="Work" />
-      <div className="w-3/4 text-justify">
+      <motion.div
+        className="w-3/4 text-justify"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+      >
         <p>
           &emsp; Still early in my developer journey, I'm a{' '}
           <i>pragmatic learner</i> who thrives when my head, heart, and hands
@@ -42,7 +62,7 @@ const Home = () => {
           Recently graduated from Telerik Academy, I'm passionate about building
           digital services with the goal of mastering JavaScript.
         </p>
-      </div>
+      </motion.div>
       <Button
         color={BrandColor.PRIMARY}
         variant={ButtonVariant.PRIMARY}
@@ -51,11 +71,23 @@ const Home = () => {
         My Portfolio &rarr;
       </Button>
       <Divider value="Relevant Bio" />
-      <div className="w-3/4">
+      <motion.div
+        className="w-3/4"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+      >
         <Timeline />
-      </div>
+      </motion.div>
       <Divider value="I ♥" />
-      <div className="w-3/4 text-justify">
+      <motion.div
+        className="w-3/4 text-justify"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+      >
         <ul>
           <li className="flex gap-2 items-center">
             <FaPaw /> Hiking with my cocker spaniel,{' '}
@@ -84,11 +116,9 @@ const Home = () => {
             friends on the Nintendo Switch
           </li>
         </ul>
-      </div>
-      <div className="w-3/4 pt-10">
-        <p className="text-sm">© 2024 Nikola Nenovski. All right reserved.</p>
-      </div>
-    </div>
+      </motion.div>
+      <Footer />
+    </motion.div>
   );
 };
 

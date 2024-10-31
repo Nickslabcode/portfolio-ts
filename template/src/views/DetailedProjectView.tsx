@@ -7,6 +7,8 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import TableOfContents from '../components/TableOfContents';
 import { ActiveSection } from '../enums/ActiveSection.enum';
 import MarkdownRenderedComponent from '../components/MarkdownRenderedComponent';
+import Footer from '../components/Footer';
+import { motion } from 'framer-motion';
 
 const DetailedProjectView: React.FC = () => {
   const { slug } = useParams();
@@ -33,7 +35,13 @@ const DetailedProjectView: React.FC = () => {
   console.log(projectRawData[3]);
 
   return (
-    <div className="flex flex-col items-center justify-center pt-10 gap-5">
+    <motion.div
+      className="flex flex-col items-center justify-center pt-10 gap-5"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 20 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+    >
       <div className="w-3/4">
         <Breadcrumbs currentViewTitle={project.title} />
         {isLoading ? (
@@ -44,27 +52,49 @@ const DetailedProjectView: React.FC = () => {
               activeSection={activeSection}
               setActiveSection={setActiveSection}
             />
-            <div className="max-w-full flex flex-wrap justify-center xl:justify-start text-start">
+            <motion.div
+              className="max-w-full flex flex-wrap justify-center xl:justify-start text-start"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.5, ease: 'easeInOut' }}
+            >
               {activeSection === ActiveSection.OVERVIEW && (
-                <MarkdownRenderedComponent content={projectRawData[1]} />
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                  <MarkdownRenderedComponent content={projectRawData[1]} />
+                </motion.div>
               )}
               {activeSection === ActiveSection.KEY_FEATURES && (
-                <MarkdownRenderedComponent content={projectRawData[2]} />
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                  <MarkdownRenderedComponent content={projectRawData[2]} />
+                </motion.div>
               )}
               {activeSection === ActiveSection.SETUP && (
-                <MarkdownRenderedComponent content={projectRawData[3]} />
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                >
+                  <MarkdownRenderedComponent content={projectRawData[3]} />
+                </motion.div>
               )}
-            </div>
-
-            {/* {projectRawData.map(section => (
-              <div>
-                <Markdown remarkPlugins={[remarkGfm]}>{section}</Markdown>
-              </div>
-            ))} */}
+            </motion.div>
           </>
         )}
       </div>
-    </div>
+      <Footer />
+    </motion.div>
   );
 };
 
