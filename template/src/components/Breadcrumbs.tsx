@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { PiHouseSimple } from 'react-icons/pi';
 
 interface BreadcrumbsProps {
   currentViewTitle: string;
@@ -11,6 +12,7 @@ const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ currentViewTitle }) => {
       <ul>
         <li>
           <Link to="/" className="text-primary">
+            <PiHouseSimple size={20} className="mr-1" />
             Home
           </Link>
         </li>

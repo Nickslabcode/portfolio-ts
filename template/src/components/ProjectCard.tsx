@@ -33,7 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <Button
             color={BrandColor.PRIMARY}
             variant={ButtonVariant.PRIMARY}
-            handleClick={() => navigate(`${project.slug}`)}
+            handleClick={() => navigate(`${project.slug!.split('/')[1]}`)}
           >
             Details &rarr;
           </Button>
