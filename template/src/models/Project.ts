@@ -5,4 +5,6 @@ export interface Project {
   featuredImage: string;
   technologies: string[];
   githubLink: string;
+  overview: string;
+  demo: string;
 }

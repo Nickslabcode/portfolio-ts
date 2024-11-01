@@ -16,3 +16,7 @@ body,
 html {
   font-size: large;
 }
+
+html {
+  overflow-y: scroll;
+}

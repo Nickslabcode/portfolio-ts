@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between backdrop-blur-md fixed left-0 right-0 2xl:left-1/4 2xl:right-1/4 z-10 top-0 py-3 px-8">
       <div className="flex items-center gap-6">
         <Link to="/" className="font-semibold text-lg">
           Nikola Nenovski
