@@ -33,8 +33,6 @@ const DetailedProjectView: React.FC = () => {
       .finally(() => setTimeout(() => setIsLoading(false), 500));
   }, [project.slug]);
 
-  console.log(projectRawData[3]);
-
   return (
     <div className="flex flex-col items-center justify-center pt-10 gap-5">
       <div className="w-3/4">
