@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <motion.div
-      className="flex flex-col items-center justify-center pt-10 gap-5"
+      className="flex flex-col items-center justify-center pt-10 gap-5 mt-10"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
@@ -91,11 +91,11 @@ const Home = () => {
         <ul>
           <li className="flex gap-2 items-center">
             <FaPaw /> Hiking with my cocker spaniel,{' '}
-            <div className="dropdown dropdown-top dropdown-hover">
+            <div className="dropdown dropdown-top dropdown-left dropdown-hover">
               <span className="text-primary cursor-pointer">Ruffles</span>
               <div
                 tabIndex={0}
-                className="dropdown-content card card-compact text-primary-content z-[1] w-64 p-1"
+                className="dropdown-content card card-compact text-primary-content z-[1] w-60 p-1"
               >
                 <div className="card-body">
                   <img

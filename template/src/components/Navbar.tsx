@@ -33,25 +33,30 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex gap-2">
-        <details className="md:hidden dropdown dropdown-end">
-          <summary className="btn btn-ghost" onClick={handleHamburgerClick}>
+        <details
+          className="md:hidden dropdown dropdown-end"
+          onClick={handleHamburgerClick}
+        >
+          <summary className="btn btn-ghost">
             {isExpanded ? <IoClose size={25} /> : <IoMenu size={25} />}
           </summary>
-          <ul className="menu dropdown-content bg-base-200 rounded-box z-[1] w-52 p-2 shadow">
-            <li>
-              <Link to="/projects">Projects</Link>
-            </li>
-            <li>
-              <a
-                href="https://github.com/Nickslabcode/portfolio-ts"
-                className="flex gap-2"
-                target="_blank"
-              >
-                Source
-                <FaGithub size={25} />
-              </a>
-            </li>
-          </ul>
+          {isExpanded && (
+            <ul className="menu dropdown-content bg-base-200 rounded-box z-[1] w-52 p-2 shadow">
+              <li>
+                <Link to="/projects">Projects</Link>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Nickslabcode/portfolio-ts"
+                  className="flex gap-2"
+                  target="_blank"
+                >
+                  Source
+                  <FaGithub size={25} />
+                </a>
+              </li>
+            </ul>
+          )}
         </details>
         <ThemeController />
       </div>
