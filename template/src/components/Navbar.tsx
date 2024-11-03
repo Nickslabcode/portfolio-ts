@@ -15,14 +15,16 @@ const Navbar = () => {
   return (
     <div className="flex justify-between backdrop-blur-md fixed left-0 right-0 2xl:left-1/4 2xl:right-1/4 z-10 top-0 py-3 px-8">
       <div className="flex items-center gap-6">
-        <Link to="/" className="font-semibold text-lg">
+        <Link to="/" className="font-semibold text-lg hover:text-primary">
           Nikola Nenovski
         </Link>
         <div className="gap-6 hidden md:flex">
-          <Link to="/projects">Projects</Link>
+          <Link to="/projects" className="link-hover">
+            Projects
+          </Link>
           <a
             href="https://github.com/Nickslabcode/portfolio-ts"
-            className="flex gap-2"
+            className="flex gap-2 link-hover"
             target="_blank"
           >
             <FaGithub size={25} />

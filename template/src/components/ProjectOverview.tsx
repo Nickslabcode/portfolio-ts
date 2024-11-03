@@ -12,7 +12,7 @@ const ProjectOverview: React.FC<{ project: Project }> = ({ project }) => {
         </span>
         <a
           href={project.githubLink}
-          className="flex gap-1 link link-primary text-sm"
+          className="flex gap-1 link link-primary text-sm font-semibold"
           target="_blank"
         >
           <FaGithub size={20} />
@@ -20,7 +20,7 @@ const ProjectOverview: React.FC<{ project: Project }> = ({ project }) => {
         </a>
         <a
           href={project.demo}
-          className="flex gap-1 link link-primary text-sm"
+          className="flex gap-1 link link-primary text-sm font-semibold"
           target="_blank"
         >
           <FaExternalLinkAlt size={18} />

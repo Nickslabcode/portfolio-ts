@@ -23,18 +23,19 @@ export const data = [
     title: 'Everything Pixel',
     slug: 'Team-06-alpha-A62/everything-pixel',
     description: 'Single-page forum application with social features.',
-    overview: '',
+    overview:
+      'Everything Pixel is a forum application that offers the ability for users to create posts, as well as interact with other users posts by upvoting, downvoting, saving, commenting, as well as reporting. It also offers a follow system so users can interact with other users and get notifications for activity in real-time. Admins are able to search users, view their profiles and respond to reports by banning/unbanning them.',
     featuredImage: 'https://nikola-nenovski.info/images/everything-pixel.png',
     technologies: ['React', 'Firebase', 'SCSS'],
     githubLink: 'https://github.com/Team-06-alpha-A62/everything-pixel',
-    demo: 'https://veil-35640.web.app',
+    demo: 'https://everything-pixel.web.app',
   },
   {
     title: 'Kapow',
     slug: 'Team-06-alpha-A62/kapow',
-    description:
-      'Gif management single-page application with vanilla JavaScript.',
-    overview: '',
+    description: 'Gif single-page application with vanilla JavaScript.',
+    overview:
+      'Kapow is a vanilla JavaScript GIF application that offers various functionalities, such as searching GIFs by keywords, displaying trending GIFs, saving GIFs to favorites, as well as uploading.',
     featuredImage: 'https://nikola-nenovski.info/images/kapow.png',
     technologies: ['JavaScript', 'AJAX', 'Giphy API', 'HTML', 'CSS'],
     githubLink: 'https://github.com/Team-06-alpha-A62/kapow',
