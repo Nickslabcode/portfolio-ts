@@ -90,30 +90,36 @@ const Home = () => {
       >
         <ul>
           <li className="flex gap-2 items-center">
-            <FaPaw /> Hiking with my cocker spaniel,{' '}
-            <div className="dropdown dropdown-top dropdown-left dropdown-hover">
-              <span className="text-primary cursor-pointer">Ruffles</span>
-              <div
-                tabIndex={0}
-                className="dropdown-content card card-compact text-primary-content z-[1] w-60 p-1"
-              >
-                <div className="card-body">
-                  <img
-                    src={rufflesGif}
-                    alt="cocker spaniel eating a cherry"
-                    className="shadow-md rounded-3xl"
-                  />
+            <FaPaw />{' '}
+            <p>
+              Hiking with my cocker spaniel,{' '}
+              <div className="dropdown dropdown-top dropdown-left md:dropdown-hover">
+                <span className="text-primary cursor-pointer">Ruffles</span>
+                <div
+                  tabIndex={0}
+                  className="dropdown-content card card-compact text-primary-content z-[1] w-60 p-1"
+                >
+                  <div className="card-body">
+                    <img
+                      src={rufflesGif}
+                      alt="cocker spaniel eating a cherry"
+                      className="shadow-md rounded-3xl"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            </p>
           </li>
           <li className="flex gap-2 items-center">
-            <FaPuzzlePiece /> Learning skill toys, solving Jigsaw puzzles &
-            Brain teasers
+            <FaPuzzlePiece />{' '}
+            <p>Learning skill toys, solving Jigsaw puzzles & Brain teasers </p>
           </li>
           <li className="flex gap-2 items-center">
-            <SiNintendoswitch /> Playing board games & couch co-op games with
-            friends on the Nintendo Switch
+            <SiNintendoswitch />{' '}
+            <p>
+              Playing board games & couch co-op games with friends on the
+              Nintendo Switch
+            </p>
           </li>
         </ul>
       </motion.div>
