@@ -1,7 +1,26 @@
+import { Theme } from '../enums/Theme.enum';
+import { useTheme } from '../providers/ThemeProvider';
+
 const ThemeController = () => {
+  const { theme, changeTheme } = useTheme();
+
+  const switchTheme = () => {
+    if (theme === Theme.LIGHT) {
+      changeTheme(Theme.DARK);
+    } else {
+      changeTheme(Theme.LIGHT);
+    }
+  };
+
   return (
     <label className="swap swap-rotate">
-      <input type="checkbox" className="theme-controller" value="cupcake" />
+      <input
+        type="checkbox"
+        className="theme-controller"
+        value={Theme.LIGHT}
+        onChange={() => switchTheme()}
+        checked={theme === Theme.LIGHT}
+      />
 
       {/* sun icon */}
       <svg
