@@ -1,63 +1,82 @@
 import { Link } from 'react-router-dom';
 import ThemeController from './ThemeController.tsx';
 import { FaGithub } from 'react-icons/fa';
-import { useState } from 'react';
-import { IoMenu } from 'react-icons/io5';
-import { IoClose } from 'react-icons/io5';
 
 const Navbar = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const handleHamburgerClick = () => {
-    setIsExpanded(prevValue => !prevValue);
-  };
-
   return (
-    <div className="flex justify-between backdrop-blur-md fixed left-0 right-0 2xl:left-1/4 2xl:right-1/4 z-10 top-0 py-3 px-8">
-      <div className="flex items-center gap-6">
-        <Link to="/" className="font-semibold text-lg hover:text-primary">
-          Nikola Nenovski
-        </Link>
-        <div className="gap-6 hidden md:flex">
-          <Link to="/projects" className="link-hover">
-            Projects
-          </Link>
-          <a
-            href="https://github.com/Nickslabcode/portfolio-ts"
-            className="flex gap-2 link-hover"
-            target="_blank"
+    <div className="flex justify-around items-center backdrop-blur-md fixed left-0 right-0  z-10 top-0 py-2">
+      <div className="flex items-center">
+        <div className="dropdown">
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-ghost lg:hidden mr-4"
           >
-            <FaGithub size={25} />
-            Source
-          </a>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabIndex={0}
+            className="menu menu-sm items-center dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+          >
+            <li>
+              <Link to="/projects" className="link-hover">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <a
+                href="https://github.com/Nickslabcode/portfolio-ts"
+                className="flex gap-2 link-hover"
+                target="_blank"
+              >
+                <FaGithub size={25} />
+                Source
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <Link
+            to="/"
+            className="font-semibold text-lg hover:text-primary w-1/4"
+          >
+            Nikola Nenovski
+          </Link>
+        </div>
+        <div className="hidden lg:flex">
+          <ul className="menu menu-horizontal px-1 items-center">
+            <li>
+              <Link to="/projects" className="link-hover">
+                Projects
+              </Link>
+            </li>
+            <li>
+              <a
+                href="https://github.com/Nickslabcode/portfolio-ts"
+                className="flex gap-2 link-hover"
+                target="_blank"
+              >
+                <FaGithub size={25} />
+                Source
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div className="flex gap-2">
-        <details
-          className="md:hidden dropdown dropdown-end"
-          onClick={handleHamburgerClick}
-        >
-          <summary className="btn btn-ghost">
-            {isExpanded ? <IoClose size={25} /> : <IoMenu size={25} />}
-          </summary>
-          {isExpanded && (
-            <ul className="menu dropdown-content bg-base-200 rounded-box z-[1] w-52 p-2 shadow">
-              <li>
-                <Link to="/projects">Projects</Link>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/Nickslabcode/portfolio-ts"
-                  className="flex gap-2"
-                  target="_blank"
-                >
-                  Source
-                  <FaGithub size={25} />
-                </a>
-              </li>
-            </ul>
-          )}
-        </details>
+      <div className="text-end">
         <ThemeController />
       </div>
     </div>
