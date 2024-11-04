@@ -81,9 +81,10 @@ const Timeline: React.FC = () => {
         <div className="timeline-start mb-10 md:text-end timeline-box shadow-md">
           <time className="font-mono italic">03.2019 - 12.2019</time>
           <h2 className="text-lg font-semibold">Independent Freelancer</h2>
+
           <a
             href="https://www.upwork.com/freelancers/~019b57b5b048ed8468"
-            className="btn btn-link rounded-3xl btn-sm my-1 items-center"
+            className="btn btn-outline rounded-3xl btn-sm my-1 items-center"
             target="_blank"
           >
             <FaSquareUpwork size={20} />

@@ -80,7 +80,7 @@ const Home = () => {
       >
         <Timeline />
       </motion.div>
-      <Divider value="I ♥" />
+      <Divider value="Hobbies" />
       <motion.div
         className="w-3/4 text-justify"
         initial={{ opacity: 0, y: 20 }}
@@ -88,9 +88,11 @@ const Home = () => {
         exit={{ opacity: 0, y: 20 }}
         transition={{ duration: 0.5, ease: 'easeInOut' }}
       >
-        <ul>
+        <ul className="flex flex-col gap-2">
           <li className="flex gap-2 items-center">
-            <FaPaw />{' '}
+            <span>
+              <FaPaw size={20} />
+            </span>
             <p>
               Hiking with my cocker spaniel,{' '}
               <div className="dropdown dropdown-top dropdown-left md:dropdown-hover">
@@ -108,17 +110,22 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+              .
             </p>
           </li>
           <li className="flex gap-2 items-center">
-            <FaPuzzlePiece />{' '}
-            <p>Learning skill toys, solving Jigsaw puzzles & Brain teasers </p>
+            <span>
+              <FaPuzzlePiece size={20} />
+            </span>
+            <p>Learning skill toys, solving Jigsaw puzzles & Brain teasers.</p>
           </li>
           <li className="flex gap-2 items-center">
-            <SiNintendoswitch />{' '}
+            <span>
+              <SiNintendoswitch size={20} />
+            </span>
             <p>
               Playing board games & couch co-op games with friends on the
-              Nintendo Switch
+              Nintendo Switch.
             </p>
           </li>
         </ul>

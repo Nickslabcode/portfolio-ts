@@ -11,12 +11,6 @@ h6 {
   font-family: 'M PLUS Rounded 1c';
 }
 
-*,
-body,
-html {
-  font-size: large;
-}
-
 html {
   overflow-y: scroll;
 }
