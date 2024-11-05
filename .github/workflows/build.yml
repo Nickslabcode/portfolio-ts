@@ -22,14 +22,6 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      # Add server to known hosts
-      - name: Add server to known hosts
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
       # Deploy dist to the server
       - name: Deploy to remote server
         run: scp -r -P 18765 ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:www/nikola-nenovski.info/public_html
