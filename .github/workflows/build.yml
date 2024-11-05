@@ -23,7 +23,7 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      -name: Add SSH to known_hosts
+      - name: Add SSH to known_hosts
         run: ssh-keyscan -p 18765 gnldm1064.siteground.biz >> ~/.ssh/known_hosts
 
       # Deploy dist to the server
