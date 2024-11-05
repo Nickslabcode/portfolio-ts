@@ -1,5 +1,4 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and deploy it to SiteGround
 
 name: build CI
 
@@ -23,12 +22,9 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      - name: Add SSH to known_hosts
-        run: ssh-keyscan -p 18765 gnldm1064.siteground.biz >> ~/.ssh/known_hosts
-
       # Deploy dist to the server
       - name: Deploy to remote server
-        run: scp -r -P 18765 ./dist/* u2433-a9rqywtd0bh4@gnldm1064.siteground.biz:www/nikola-nenovski.info/public_html
+        run: scp -r -P 18765 ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:www/nikola-nenovski.info/public_html
         env:
           SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
