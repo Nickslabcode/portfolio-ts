@@ -33,11 +33,11 @@ jobs:
 
       # Deploy dist to the server
       - name: Deploy to remote server
-        run: scp -r -P 18765 -o StrictHostKeyChecking=no ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:www/${{ vars.DOMAIN }}/public_html
+        run: scp -r -P ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=no ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:www/${{ vars.DOMAIN }}/public_html
 
       # Clear dynamic cache on SG
       - name: Clear dynamic cache
-        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p18765 "site-tools-client domain update id=1 flush_cache=1"
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p${{ secrets.SSH_PORT }} "site-tools-client domain update id=1 flush_cache=1"
 
       - name: Show deployment link
         run: echo "::notice::Deployed! https://${{ vars.DOMAIN }}"
