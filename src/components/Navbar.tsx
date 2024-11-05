@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 
 const Navbar = () => {
   return (
-    <div className="flex justify-around items-center backdrop-blur-md fixed left-0 right-0  z-10 top-0 py-2">
+    <div className="flex justify-around items-center backdrop-blur-md fixed left-0 right-0  z-10 top-0 py-4">
       <div className="flex items-center">
         <div className="dropdown">
           <div
@@ -29,17 +29,17 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm items-center dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm gap-2 items-center dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             <li>
-              <Link to="/projects" className="link-hover">
+              <Link to="/projects" className="link-hover text-base">
                 Projects
               </Link>
             </li>
             <li>
               <a
                 href="https://github.com/Nickslabcode/portfolio-ts"
-                className="flex gap-2 link-hover"
+                className="flex gap-2 link-hover text-base"
                 target="_blank"
               >
                 <FaGithub size={25} />
@@ -57,16 +57,16 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 items-center">
+          <ul className=" ml-4 flex gap-4 px-1 items-center">
             <li>
-              <Link to="/projects" className="link-hover">
+              <Link to="/projects" className="link-hover text-base">
                 Projects
               </Link>
             </li>
             <li>
               <a
                 href="https://github.com/Nickslabcode/portfolio-ts"
-                className="flex gap-2 link-hover"
+                className="flex gap-2 link-hover text-base"
                 target="_blank"
               >
                 <FaGithub size={25} />
@@ -76,9 +76,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <div className="text-end">
-        <ThemeController />
-      </div>
+      <ThemeController />
     </div>
   );
 };

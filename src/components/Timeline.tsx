@@ -55,7 +55,7 @@ const Timeline: React.FC = () => {
         </div>
         <div className="timeline-end mb-10 md:text-start timeline-box shadow-md">
           <time className="font-mono italic">09.2020 - 03.2024</time>
-          <h2 className="text-lg font-semibold">Siteground Hosting</h2>
+          <h2 className="text-lg font-semibold">SiteGround Hosting</h2>
           Provided expert technical support to global clients in English,
           resolving issues related to WordPress, DNS, domain management, FTP,
           email and SSH configuration.

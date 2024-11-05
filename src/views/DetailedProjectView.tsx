@@ -34,7 +34,7 @@ const DetailedProjectView: React.FC = () => {
   }, [project.slug]);
 
   return (
-    <div className="flex flex-col items-center justify-center pt-10 gap-5">
+    <div className="flex flex-col items-center justify-center pt-10 gap-5 mt-5">
       <div className="w-3/4">
         <Breadcrumbs currentViewTitle={project.title} />
         {isLoading ? (

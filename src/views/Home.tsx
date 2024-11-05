@@ -52,14 +52,13 @@ const Home = () => {
         transition={{ duration: 0.5, ease: 'easeInOut' }}
       >
         <p>
-          &emsp; Still early in my developer journey, I'm a{' '}
-          <i>pragmatic learner</i> who thrives when my head, heart, and hands
-          work in harmony to solve real-world problems. After nearly 4 years in
-          customer care within the hosting services field, as well as working as
-          a freelancer, I've gained valuable experience in researching, solving
+          &emsp; Through hard work and curiosity, I've journeyed to where I am
+          today. I've gained valuable experience in researching, solving
           technical challenges, communication, adaptability, and discipline.
           Recently graduated from Telerik Academy, I'm passionate about building
-          digital services with the goal of mastering JavaScript.
+          digital services with the goal of mastering JavaScript. As you explore
+          my portfolio, you'll see how my mind, heart, and hands work in harmony
+          to solve real-world problems.
         </p>
       </motion.div>
       <Button
