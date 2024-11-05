@@ -24,7 +24,7 @@ jobs:
 
       # Deploy dist to the server
       - name: Deploy to remote server
-        run: scp -r -P 18765 ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:www/nikola-nenovski.info/public_html
+        run: scp -r -P 18765 -o StrictHostKeyChecking no ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:www/nikola-nenovski.info/public_html
         env:
           SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
