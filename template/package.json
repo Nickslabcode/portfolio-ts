@@ -1,8 +1,10 @@
 {
-  "name": "template",
+  "name": "portfolio",
+  "description": "Portfolio website built with TypeScript and React where I can display my projects.",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "author": "Nikola Nenovski <nicknenovski@gmail.com>",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
