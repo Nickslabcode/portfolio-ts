@@ -34,8 +34,13 @@ jobs:
       # Deploy dist to the server
       - name: Deploy to remote server
         run: scp -r -P 18765 -o StrictHostKeyChecking=no ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:www/nikola-nenovski.info/public_html
-        env:
-          SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      # Clear dynamic cache on SG
+      - name: Clear dynamic cache
+        run: |
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p18765
+          site-tools-client domain update id=1 flush_cache=1
+          exit
 
       - name: Show deployment link
         run: echo "Deployed! https://nikola-nenovski.info"
