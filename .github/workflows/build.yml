@@ -40,4 +40,4 @@ jobs:
         run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p18765 "site-tools-client domain update id=1 flush_cache=1"
 
       - name: Show deployment link
-        run: echo "Deployed! https://${{ vars.DOMAIN }}"
+        run: echo "::notice::Deployed! https://${{ vars.DOMAIN }}"
