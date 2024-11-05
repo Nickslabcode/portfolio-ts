@@ -37,10 +37,7 @@ jobs:
 
       # Clear dynamic cache on SG
       - name: Clear dynamic cache
-        run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p18765
-          site-tools-client domain update id=1 flush_cache=1
-          exit
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p18765 "site-tools-client domain update id=1 flush_cache=1"
 
       - name: Show deployment link
         run: echo "Deployed! https://nikola-nenovski.info"
