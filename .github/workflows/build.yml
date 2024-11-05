@@ -1,6 +1,6 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and deploy it to SiteGround
+# This workflow does a clean installation of node dependencies, cache/restore them, build the dist directory, deploy it to Siteground and clear the dynamic cache
 
-name: build CI
+name: build CI/CD pipeline
 
 on:
   push:
@@ -33,14 +33,11 @@ jobs:
 
       # Deploy dist to the server
       - name: Deploy to remote server
-        run: scp -r -P 18765 -o StrictHostKeyChecking=no ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:www/nikola-nenovski.info/public_html
+        run: scp -r -P 18765 -o StrictHostKeyChecking=no ./dist/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:www/${{ vars.DOMAIN }}/public_html
 
       # Clear dynamic cache on SG
       - name: Clear dynamic cache
-        run: |
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p18765
-          site-tools-client domain update id=1 flush_cache=1
-          exit
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} -p18765 "site-tools-client domain update id=1 flush_cache=1"
 
       - name: Show deployment link
-        run: echo "Deployed! https://nikola-nenovski.info"
+        run: echo "Deployed! https://${{ vars.DOMAIN }}"
