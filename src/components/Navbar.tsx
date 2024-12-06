@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom';
-import ThemeController from './ThemeController.tsx';
-import { FaGithub } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+import ThemeController from "./ThemeController.tsx";
+import { FaGithub, FaLinkedin, FaGithubSquare } from "react-icons/fa";
+import { FaCode } from "react-icons/fa6";
 
 const Navbar = () => {
   return (
@@ -39,10 +40,10 @@ const Navbar = () => {
             <li>
               <a
                 href="https://github.com/Nickslabcode/portfolio-ts"
-                className="flex gap-2 link-hover text-base"
+                className="flex gap-2 link-hover"
                 target="_blank"
               >
-                <FaGithub size={25} />
+                <FaCode size={20} />
                 Source
               </a>
             </li>
@@ -66,17 +67,34 @@ const Navbar = () => {
             <li>
               <a
                 href="https://github.com/Nickslabcode/portfolio-ts"
-                className="flex gap-2 link-hover text-base"
+                className="flex gap-1 link-hover items-center text-base"
                 target="_blank"
               >
-                <FaGithub size={25} />
+                <FaCode size={20} />
                 Source
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <ThemeController />
+      <div className="flex items-center gap-2">
+        <a
+          href="https://www.linkedin.com/in/nikola-nenovski-326291324"
+          className="hover:text-primary cursor-pointer"
+          target="_blank"
+        >
+          <FaLinkedin size={25} />
+        </a>
+        <a
+          href="https://github.com/Nickslabcode"
+          className="mr-2 hover:text-primary cursor-pointer"
+          target="_blank"
+        >
+          <FaGithubSquare size={25} />
+        </a>
+
+        <ThemeController />
+      </div>
     </div>
   );
 };
