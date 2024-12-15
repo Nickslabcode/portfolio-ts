@@ -23,9 +23,9 @@ const Timeline: React.FC = () => {
           </svg>
         </div>
         <div className="timeline-start mb-10 md:text-end timeline-box shadow-md">
-          <time className="font-mono italic">11.2024 - Present</time>
+          <time className="font-mono italic">11.2024 - 12.2024</time>
           <h2 className="text-lg font-semibold">Telerik Mentorship program</h2>
-          Mentoring a group of three mentees in Telerik Academy's Alpha
+          Mentored a group of three mentees in Telerik Academy's Alpha
           JavaScript track, guiding them through their final project with React,
           TypeScript and Firebase.
         </div>
