@@ -29,6 +29,7 @@ const DetailedProjectView: React.FC = () => {
       .then(response =>
         setProjectRawData(response.split('<!-- End of Section -->'))
       )
+      .then(data => console.log(data))
       .catch((err: Error) => console.error(err.message))
       .finally(() => setTimeout(() => setIsLoading(false), 500));
   }, [project.slug]);
@@ -70,7 +71,15 @@ const DetailedProjectView: React.FC = () => {
                   exit={{ opacity: 0, y: 20 }}
                   transition={{ duration: 0.5, ease: 'easeInOut' }}
                 >
-                  <MarkdownRenderedComponent content={projectRawData[3]} />
+                  {
+                    <MarkdownRenderedComponent
+                      content={
+                        projectRawData[3].length > 4
+                          ? projectRawData[3]
+                          : 'No instructions for this project.'
+                      }
+                    />
+                  }
                 </motion.div>
               )}
             </motion.div>
