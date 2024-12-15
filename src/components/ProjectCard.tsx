@@ -28,6 +28,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{project.title}</h2>
+        <div className="text-start flex gap-2">
+          <span className="text-sm text-gray-500">{project.date}</span>
+          {project.inProgress && (
+            <span className="badge badge-warning badge-sm font-semibold">
+              In Progress
+            </span>
+          )}
+        </div>
         <p className="text-start">{project.description}</p>
         <div className="card-actions justify-start">
           {project.technologies?.map((technology: string) => (

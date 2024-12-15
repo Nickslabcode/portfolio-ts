@@ -1,7 +1,29 @@
 export const data = [
   {
+    title: 'Domain Lookup',
+    date: 'Nov 2024',
+    inProgress: true,
+    slug: 'Nickslabcode/domain-info-lookup',
+    description:
+      'Production tool for retrieving domain and site information, such as WHOIS, SSL, DNS data, and more.',
+    overview:
+      "A production single-page app to streamline domain and site information retrieval for hosting support professionals. The tool retrieves WHOIS, SSL and DNS data, and checks for active CDN and WordPress installations in a single interface. It includes a search history, and it's designed to improve efficiency and enhance troubleshooting workflows.",
+    featuredImage: 'https://nikola-nenovski.info/images/domain-lookup.png',
+    technologies: [
+      'TypeScript',
+      'React',
+      'Axios',
+      'Tailwind CSS',
+      'Daisy UI',
+      'Express JS',
+      'GitHub Actions',
+    ],
+    githubLink: 'https://github.com/Nickslabcode/domain-info-lookup',
+    demo: 'https://domain-lookup.nikola-nenovski.info/',
+  },
+  {
     title: 'Veil',
-    date: 'August 2024 - September 2024',
+    date: 'Aug 2024 - Sep 2024',
     inProgress: false,
     slug: 'Team-06-alpha-A62/veil',
     description:
@@ -23,7 +45,7 @@ export const data = [
   },
   {
     title: 'Everything Pixel',
-    date: 'July 2024 - August 2024',
+    date: 'Jul 2024 - Aug 2024',
     inProgress: false,
     slug: 'Team-06-alpha-A62/everything-pixel',
     description: 'Single-page forum application with social features.',
@@ -36,7 +58,7 @@ export const data = [
   },
   {
     title: 'Kapow',
-    date: 'July 2024',
+    date: 'Jul 2024',
     inProgress: false,
     slug: 'Team-06-alpha-A62/kapow',
     description: 'Gif single-page application with vanilla JavaScript.',
@@ -48,8 +70,8 @@ export const data = [
     demo: 'https://kapow.nikola-nenovski.info',
   },
   {
-    title: 'keyboardLogger',
-    date: 'July 2024',
+    title: 'keyboard Logger',
+    date: 'Jul 2024',
     inProgress: false,
     slug: 'Nickslabcode/keyboardLogger',
     description: 'Simple keyboard event logger and keyboard visualizer.',
@@ -59,27 +81,5 @@ export const data = [
     technologies: ['HTML', 'CSS', 'JavaScript'],
     githubLink: 'https://github.com/Nickslabcode/keyboardLogger',
     demo: 'https://kblogger.nikola-nenovski.info/',
-  },
-  {
-    title: 'DomainLookup',
-    date: 'November 2024',
-    inProgress: true,
-    slug: 'Nickslabcode/domain-info-lookup',
-    description:
-      'A production tool for retrieving domain information, such as WHOIS, SSL, DNS data, and more.',
-    overview:
-      "A production single-page app to streamline domain information retrieval for hosting support professionals. The tool retrieves WHOIS, SSL and DNS data, and checks for active CDN and WordPress installations in a single interface. It includes a search history, and it's designed to improve efficiency and enhance troubleshooting workflows.",
-    featuredImage: 'https://nikola-nenovski.info/images/domain-lookup.png',
-    technologies: [
-      'TypeScript',
-      'React',
-      'Axios',
-      'Tailwind CSS',
-      'Daisy UI',
-      'Express JS',
-      'GitHub Actions',
-    ],
-    githubLink: 'https://github.com/Nickslabcode/domain-info-lookup',
-    demo: 'https://domain-lookup.nikola-nenovski.info/',
   },
 ];
