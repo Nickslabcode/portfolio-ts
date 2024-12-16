@@ -24,7 +24,7 @@ const DetailedProjectView: React.FC = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://raw.githubusercontent.com/${project.slug}/main/README.md`)
+    fetch(`https://raw.githubusercontent.com/${project.slug}/dev/README.md`)
       .then(response => response.text())
       .then(response =>
         setProjectRawData(response.split('<!-- End of Section -->'))
@@ -74,7 +74,7 @@ const DetailedProjectView: React.FC = () => {
                   {
                     <MarkdownRenderedComponent
                       content={
-                        projectRawData[3].length > 4
+                        projectRawData[3]?.length > 4
                           ? projectRawData[3]
                           : 'No instructions for this project.'
                       }
