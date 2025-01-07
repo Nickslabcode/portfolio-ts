@@ -8,8 +8,8 @@ import TableOfContents from '../components/TableOfContents';
 import { ActiveSection } from '../enums/ActiveSection.enum';
 import MarkdownRenderedComponent from '../components/MarkdownRenderedComponent';
 import Footer from '../components/Footer';
-import { motion } from 'framer-motion';
 import ProjectOverview from '../components/ProjectOverview';
+import MotionContainer from '../hoc/MotionContainer';
 
 const DetailedProjectView: React.FC = () => {
   const { slug } = useParams();
@@ -46,31 +46,15 @@ const DetailedProjectView: React.FC = () => {
               activeSection={activeSection}
               setActiveSection={setActiveSection}
             />
-            <motion.div
-              className="max-w-full flex flex-wrap justify-center xl:justify-start text-start"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
-            >
+            <MotionContainer className="max-w-full flex flex-wrap justify-center xl:justify-start text-start">
               {activeSection === ActiveSection.OVERVIEW && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.5, ease: 'easeInOut' }}
-                >
+                <MotionContainer>
                   <ProjectOverview project={project} />
                   <MarkdownRenderedComponent content={projectRawData[2]} />
-                </motion.div>
+                </MotionContainer>
               )}
               {activeSection === ActiveSection.SETUP && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.5, ease: 'easeInOut' }}
-                >
+                <MotionContainer>
                   {
                     <MarkdownRenderedComponent
                       content={
@@ -80,9 +64,9 @@ const DetailedProjectView: React.FC = () => {
                       }
                     />
                   }
-                </motion.div>
+                </MotionContainer>
               )}
-            </motion.div>
+            </MotionContainer>
           </>
         )}
       </div>

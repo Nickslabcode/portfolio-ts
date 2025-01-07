@@ -16,13 +16,15 @@
     "@splinetool/runtime": "^1.9.30",
     "@types/react-icons": "^3.0.0",
     "@types/react-router-dom": "^5.3.3",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.11.11",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
     "react-markdown": "^9.0.1",
     "react-router-dom": "^6.27.0",
-    "remark-gfm": "^4.0.0"
+    "remark-gfm": "^4.0.0",
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",
