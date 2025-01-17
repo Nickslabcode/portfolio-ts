@@ -1,6 +1,6 @@
-import React from "react";
-import { FaSquareUpwork } from "react-icons/fa6";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { FaSquareUpwork } from 'react-icons/fa6';
+import { useNavigate } from 'react-router-dom';
 
 const Timeline: React.FC = () => {
   const navigate = useNavigate();
@@ -23,11 +23,12 @@ const Timeline: React.FC = () => {
           </svg>
         </div>
         <div className="timeline-start mb-10 md:text-end timeline-box shadow-md">
-          <time className="font-mono italic">11.2024 - 12.2024</time>
+          <time className="font-mono italic">11.2024 - Present</time>
           <h2 className="text-lg font-semibold">Telerik Mentorship program</h2>
-          Mentored a group of three mentees in Telerik Academy's Alpha
-          JavaScript track, guiding them through their final project with React,
-          TypeScript and Firebase.
+          Mentored groups of mentees in Telerik Academy's JavaScript track,
+          providing guidance on key concepts, project development, and study
+          approaches. Currently supporting a group of seven in building a strong
+          foundation in JavaScript fundamentals and functional programming.
         </div>
         <hr />
       </li>
@@ -53,10 +54,13 @@ const Timeline: React.FC = () => {
           </h2>
           Graduated Telerik's Academy School with JavaScript with excellence.
           <br />
-          Won Best{" "}
-          <span className="link link-primary" onClick={() => navigate('/projects/veil')}>
+          Won Best{' '}
+          <span
+            className="link link-primary"
+            onClick={() => navigate('/projects/veil')}
+          >
             Final Project
-          </span>{" "}
+          </span>{' '}
           award.
         </div>
         <hr />
