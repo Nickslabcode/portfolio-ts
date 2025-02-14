@@ -25,7 +25,7 @@ const Timeline: React.FC = () => {
         <div className="timeline-end mb-10 md:text-start timeline-box shadow-md">
           <time className="font-mono italic">01.2025 - Present</time>
           <h2 className="text-lg font-semibold">Interop.io</h2>
-          Started in one of the product teams as a Junior Software Engineer at interop.io.
+          Started as a Junior Software Engineer in one of the product teams at interop.io.
         </div>
         <hr />
       </li>
@@ -45,12 +45,11 @@ const Timeline: React.FC = () => {
           </svg>
         </div>
         <div className="timeline-start mb-10 md:text-end timeline-box shadow-md">
-          <time className="font-mono italic">11.2024 - Present</time>
+          <time className="font-mono italic">11.2024 - 02.2025</time>
           <h2 className="text-lg font-semibold">Telerik Mentorship program</h2>
-          Mentored groups of mentees in Telerik Academy's JavaScript track,
+          Mentored 2 consecutive groups of students in Telerik Academy's JavaScript track,
           providing guidance on key concepts, project development, and study
-          approaches. Currently supporting a group of seven in building a strong
-          foundation in JavaScript fundamentals and functional programming.
+          approaches.
         </div>
         <hr />
       </li>
