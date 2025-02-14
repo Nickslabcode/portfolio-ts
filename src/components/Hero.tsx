@@ -1,4 +1,4 @@
-import selfMini from '../assets/self-mini.png';
+import selfMini from '../assets/self-mini.jpg';
 import MotionContainer from '../hoc/MotionContainer';
 
 const Hero = () => {
@@ -13,7 +13,7 @@ const Hero = () => {
         based in Plovdiv, Bulgaria!
       </h1>
       <div className="avatar">
-        <div className="ring-primary ring-offset-base-100 w-32 rounded-full ring ring-offset-2">
+        <div className="ring-primary ring-offset-base-100 w-60 rounded-full ring ring-offset-2">
           <img src={selfMini} />
         </div>
       </div>
