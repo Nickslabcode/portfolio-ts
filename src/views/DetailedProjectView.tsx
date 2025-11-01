@@ -22,9 +22,11 @@ const DetailedProjectView: React.FC = () => {
   );
   const [isLoading, setIsLoading] = useState(false);
 
+  console.log(projectRawData)
+
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://raw.githubusercontent.com/${project.slug}/dev/README.md`)
+    fetch(`https://raw.githubusercontent.com/${project.slug}/main/README.md`)
       .then(response => response.text())
       .then(response =>
         setProjectRawData(response.split('<!-- End of Section -->'))
