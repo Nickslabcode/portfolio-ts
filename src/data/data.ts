@@ -8,7 +8,7 @@ export const data = [
       'Production tool for retrieving domain and site information, such as WHOIS, SSL, DNS data, and more.',
     overview:
       "A production single-page app to streamline domain and site information retrieval for hosting support professionals. The tool retrieves WHOIS, SSL and DNS data, and checks for active CDN and WordPress installations in a single interface. It includes a search history, and it's designed to improve efficiency and enhance troubleshooting workflows.",
-    featuredImage: 'https://nikola-nenovski.info/images/domain-lookup.png',
+    featuredImage: 'https://nikola-nenovski.com/images/domain-lookup.png',
     technologies: [
       'TypeScript',
       'React',
@@ -19,7 +19,7 @@ export const data = [
       'GitHub Actions',
     ],
     githubLink: 'https://github.com/Nickslabcode/domain-info-lookup',
-    demo: 'https://domain-lookup.nikola-nenovski.info/',
+    demo: 'https://domain-lookup.nikola-nenovski.com/',
   },
   {
     title: 'Veil',
@@ -30,7 +30,7 @@ export const data = [
       'Collaborative messenger single-page application with meeting scheduling, notes and video calls.',
     overview:
       'Veil is a messenger application that offers real-time communication between users, including chat, audio and video calls in direct and group channels, share media, as well as the ability to create notes and schedule meetings.',
-    featuredImage: 'https://nikola-nenovski.info/images/veil.png',
+    featuredImage: 'https://nikola-nenovski.com/images/veil.png',
     technologies: [
       'TypeScript',
       'React',
@@ -51,7 +51,7 @@ export const data = [
     description: 'Single-page forum application with social features.',
     overview:
       'Everything Pixel is a forum application that offers the ability for users to create posts, as well as interact with other users posts by upvoting, downvoting, saving, commenting, as well as reporting. It also offers a follow system so users can interact with other users and get notifications for activity in real-time. Admins are able to search users, view their profiles and respond to reports by banning/unbanning them.',
-    featuredImage: 'https://nikola-nenovski.info/images/everything-pixel.png',
+    featuredImage: 'https://nikola-nenovski.com/images/everything-pixel.png',
     technologies: ['React', 'Firebase', 'SCSS'],
     githubLink: 'https://github.com/Team-06-alpha-A62/everything-pixel',
     demo: 'https://everything-pixel.web.app',
@@ -64,10 +64,10 @@ export const data = [
     description: 'Gif single-page application with vanilla JavaScript.',
     overview:
       'Kapow is a vanilla JavaScript GIF application that offers various functionalities, such as searching GIFs by keywords, displaying trending GIFs, saving GIFs to favorites, as well as uploading.',
-    featuredImage: 'https://nikola-nenovski.info/images/kapow.png',
+    featuredImage: 'https://nikola-nenovski.com/images/kapow.png',
     technologies: ['JavaScript', 'AJAX', 'Giphy API', 'HTML', 'CSS'],
     githubLink: 'https://github.com/Team-06-alpha-A62/kapow',
-    demo: 'https://kapow.nikola-nenovski.info',
+    demo: 'https://kapow.nikola-nenovski.com',
   },
   {
     title: 'keyboard Logger',
@@ -77,9 +77,9 @@ export const data = [
     description: 'Simple keyboard event logger and keyboard visualizer.',
     overview:
       'keyboardLogger is a simple one page application that displays data about keyboard events and event history, as well as a keyboard visualizer.',
-    featuredImage: 'https://nikola-nenovski.info/images/keyboard-logger.png',
+    featuredImage: 'https://nikola-nenovski.com/images/keyboard-logger.png',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     githubLink: 'https://github.com/Nickslabcode/keyboardLogger',
-    demo: 'https://kblogger.nikola-nenovski.info/',
+    demo: 'https://kblogger.nikola-nenovski.com/',
   },
 ];
